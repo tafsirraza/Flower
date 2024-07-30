@@ -1,0 +1,108 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #e0f7fa, #b2ebf2);
+    overflow: hidden;
+}
+
+.flower-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: sway 3s infinite alternate ease-in-out;
+}
+
+@keyframes sway {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(3deg); }
+}
+
+.flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom center;
+    animation: bloom 3s ease-in-out infinite;
+}
+
+@keyframes bloom {
+    0%, 100% { transform: scale(0.8); }
+    50% { transform: scale(1.2); }
+}
+
+.petal {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: radial-gradient(circle at 50% 50%, #ff4b5c, #e64747);
+    border-radius: 50px 50px 0 0;
+    transform-origin: bottom center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.petal:hover {
+    transform: scale(1.1);
+}
+
+.petal1 { transform: rotate(0deg) translateY(-40px); }
+.petal2 { transform: rotate(72deg) translateY(-40px); }
+.petal3 { transform: rotate(144deg) translateY(-40px); }
+.petal4 { transform: rotate(216deg) translateY(-40px); }
+.petal5 { transform: rotate(288deg) translateY(-40px); }
+
+.center {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle at 50% 50%, #ffd700, #e6b800);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stem {
+    position: absolute;
+    top: 100px;
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(to bottom, #3b8d1e, #2e6a13);
+    border-radius: 5px;
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leaves {
+    position: absolute;
+    top: 180px;
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+}
+
+.leaf {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: linear-gradient(to bottom, #76c043, #56a82a);
+    border-radius: 25px 0 0 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.leaf1 {
+    left: -30px;
+    transform: rotate(-45deg);
+}
+
+.leaf2 {
+    right: -30px;
+    transform: rotate(45deg);
+}
+
